@@ -76,15 +76,15 @@ Parameter meaning (symbols from the paper are given in parentheses):
 * `induce_using_preferred`(&Upsilon;<sub>pref</sub>)/`induce_using_automatic`(&Upsilon;<sub>auto</sub>) - boolean indicating whether new rules should be induced with a use of preferred/automatic conditions and attributes,
 * `preferred_conditions_per_rule`(K<sub>C</sub>)/`preferred_attributes_per_rule`(K<sub>A</sub>) - maximum number of preferred conditions/attributes per rule,
 * `consider_other_classes` - boolean indicating whether automatic induction should be performed for classes for which no expert knowledge has been defined (classification only),
-* `expert_rules`(R<sub>exp</sub>) - set of expert rules,
+* `expert_rules`(R<sub>&oplus;</sub>) - set of expert rules,
 * `expert_preferred_conditions`(C<sub>&oplus;</sub>, A<sub>&oplus;</sub>) - set of preferred conditions (used also for specifying preferred attributes by using special value `Any`),
 * `expert_forbidden_conditions`(C<sub>&ominus;</sub>, A<sub>&ominus;</sub>) - set of forbidden conditions (used also for specifying forbidden attributes by using special valye `Any`).
 
 Let us consider the following expert knowledge (superscripts next to C<sub>&oplus;</sub>, A<sub>&oplus;</sub>, C<sub>&ominus;</sub>, and A<sub>&ominus;</sub> symbols indicate class label):
-* R<sub>exp</sub> = { (**IF** gimpuls < 750 **THEN** class = 0), (**IF** gimpuls >= 750 **THEN** class = 1)},
+* R<sub>&oplus;</sub> = { (**IF** gimpuls < 750 **THEN** class = 0), (**IF** gimpuls >= 750 **THEN** class = 1)},
 * C<sub>&oplus;</sub><sup>0</sup> = { (seismic = a) }, 
 * C<sub>&oplus;</sub><sup>1</sup> = { (seismic = b &wedge; seismoacoustic = c)<sup>5</sup> }, 
-* A<sub>&oplus;</sub><sup>1</sup> = { gimpuls<sup>&infty;</sup> },
+* A<sub>&oplus;</sub><sup>1</sup> = { gimpuls<sup>inf</sup> },
 * C<sub>&ominus;</sub><sup>0</sup> = { seismoacoustic = b },
 * A<sub>&ominus;</sub><sup>1</sup> = { ghazard }.
 The XML definition of this knowledge is presented below.
