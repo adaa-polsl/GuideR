@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<experiment>
+	<parameter_sets>
+		
+		<parameter_set name="BinaryEntropy, 1. no knowledge">
+			<param name="min_rule_covered">11</param>
+			<param name="induction_measure">BinaryEntropy</param>
+			<param name="pruning_measure">BinaryEntropy</param>
+			<param name="max_growing">0</param>
+		</parameter_set>
+		
+		<!--================================================================================================================-->
+		
+		<parameter_set name="BinaryEntropy, 2. gimpuls_750">
+			<param name="min_rule_covered">11</param>
+			<param name="induction_measure">BinaryEntropy</param>
+			<param name="pruning_measure">BinaryEntropy</param>
+			<param name="max_growing">0</param>
+			<param name="use_expert">true</param>
+			<param name="extend_using_preferred">false</param>
+			<param name="extend_using_automatic">false</param>
+			<param name="induce_using_preferred">false</param>
+			<param name="induce_using_automatic">false</param>
+			<param name ="expert_rules">
+				<entry name="rule-0">IF [[gimpuls = (-inf, 750)]] THEN class = {0}</entry>
+				<entry name="rule-1">IF [[gimpuls = &lt;750, inf)]] THEN class = {1}</entry>
+			</param>
+			<param name ="expert_preferred_conditions">
+			</param>
+			<param name ="expert_forbidden_conditions">
+			</param>	
+		</parameter_set>
+		
+		<!--================================================================================================================-->
+			
+		<parameter_set name="BinaryEntropy, 3. gimpuls_750 extended">
+			<param name="min_rule_covered">11</param>
+			<param name="induction_measure">BinaryEntropy</param>
+			<param name="pruning_measure">BinaryEntropy</param>
+			<param name="max_growing">0</param>
+			<param name="use_expert">true</param>
+			<param name="extend_using_preferred">false</param>
+			<param name="extend_using_automatic">true</param>
+			<param name="induce_using_preferred">true</param>
+			<param name="induce_using_automatic">true</param>
+			<param name ="expert_rules">
+			</param>
+			<param name ="expert_preferred_conditions">
+				<entry name="preferred-attribute-0">1: IF [[gimpuls = Any]] THEN class = {0}</entry>
+				<entry name="preferred-attribute-1">1: IF [[gimpuls = Any]] THEN class = {1}</entry>
+			</param>
+			<param name ="expert_forbidden_conditions">
+			</param>
+		</parameter_set>
+		
+		<!--================================================================================================================-->
+		
+		<parameter_set name="BinaryEntropy, 4. gimpuls_genergy_senergy">
+			<param name="min_rule_covered">11</param>
+			<param name="induction_measure">BinaryEntropy</param>
+			<param name="pruning_measure">BinaryEntropy</param>
+			<param name="max_growing">0</param>
+			<param name="use_expert">true</param>
+			<param name="extend_using_preferred">false</param>
+			<param name="extend_using_automatic">false</param>
+			<param name="induce_using_preferred">true</param>
+			<param name="induce_using_automatic">true</param>
+			<param name="preferred_conditions_per_rule">2</param>
+			<param name ="expert_rules">
+			</param>
+			<param name ="expert_preferred_conditions">
+				<entry name="preferred-attribute-0">inf: IF [[genergy = Any]] THEN class = {0}</entry>
+				<entry name="preferred-attribute-1">inf: IF [[senergy = Any]] THEN class = {0}</entry>
+				<entry name="preferred-attribute-2">inf: IF [[gimpuls = Any]] THEN class = {0}</entry>
+				<entry name="preferred-attribute-3">inf: IF [[genergy = Any]] THEN class = {1}</entry>
+				<entry name="preferred-attribute-4">inf: IF [[senergy = Any]] THEN class = {1}</entry>
+				<entry name="preferred-attribute-5">inf: IF [[gimpuls = Any]] THEN class = {1}</entry>
+			</param>
+			<param name ="expert_forbidden_conditions">
+			</param>	
+		</parameter_set>
+		
+		<!--================================================================================================================-->
+					
+		<parameter_set name="BinaryEntropy, 5. seismic OR seismoacoustic OR ghazard">
+			<param name="min_rule_covered">11</param>
+			<param name="induction_measure">BinaryEntropy</param>
+			<param name="pruning_measure">BinaryEntropy</param>
+			<param name="max_growing">0</param>
+			<param name="use_expert">true</param>
+			<param name="extend_using_preferred">false</param>
+			<param name="extend_using_automatic">true</param>
+			<param name="induce_using_preferred">true</param>
+			<param name="induce_using_automatic">true</param>
+			<param name="consider_other_classes">false</param>
+			<param name="preferred_conditions_per_rule">1</param>
+			<param name ="expert_rules">	
+			</param>
+			<param name ="expert_preferred_conditions">
+				<entry name="forb-condition-01">inf: IF [[seismic = {a}]] THEN class = {0}</entry>
+				<entry name="forb-condition-02">inf: IF [[seismic = {b}]] THEN class = {0}</entry>
+				<entry name="forb-condition-03">inf: IF [[seismoacoustic = {a}]] THEN class = {0}</entry>
+				<entry name="forb-condition-04">inf: IF [[seismoacoustic = {b}]] THEN class = {0}</entry>
+				<entry name="forb-condition-05">inf: IF [[ghazard = {a}]] THEN class = {0}</entry>
+				<entry name="forb-condition-06">inf: IF [[ghazard = {b}]] THEN class = {0}</entry>
+				
+				<entry name="forb-condition-11">inf: IF [[seismic = {b}]] THEN class = {1}</entry>
+				<entry name="forb-condition-12">inf: IF [[seismic = {c}]] THEN class = {1}</entry>
+				<entry name="forb-condition-13">inf: IF [[seismic = {d}]] THEN class = {1}</entry>
+				<entry name="forb-condition-14">inf: IF [[seismoacoustic = {b}]] THEN class = {1}</entry>
+				<entry name="forb-condition-15">inf: IF [[seismoacoustic = {c}]] THEN class = {1}</entry>
+				<entry name="forb-condition-16">inf: IF [[seismoacoustic = {d}]] THEN class = {1}</entry>
+				<entry name="forb-condition-17">inf: IF [[ghazard = {b}]] THEN class = {1}</entry>
+				<entry name="forb-condition-18">inf: IF [[ghazard = {c}]] THEN class = {1}</entry>
+				<entry name="forb-condition-19">inf: IF [[ghazard = {d}]] THEN class = {1}</entry>
+			</param>
+			<param name ="expert_forbidden_conditions">
+				
+			</param>
+			
+		</parameter_set>
+		
+		<!--================================================================================================================-->
+				
+		<parameter_set name="BinaryEntropy, 6. +seismic +nbumps +energy +maxenergy +shift">
+			<param name="min_rule_covered">11</param>
+			<param name="induction_measure">BinaryEntropy</param>
+			<param name="pruning_measure">BinaryEntropy</param>
+			<param name="max_growing">0</param>
+			<param name="use_expert">true</param>
+			<param name="extend_using_preferred">false</param>
+			<param name="extend_using_automatic">false</param>
+			<param name="induce_using_preferred">false</param>
+			<param name="induce_using_automatic">true</param>
+			<param name="consider_other_classes">false</param>
+			<param name ="expert_rules">
+			</param>
+			<param name ="expert_preferred_conditions">
+			</param>
+			<param name ="expert_forbidden_conditions">
+				<entry name="forb-attribute-00">1: IF [[seismoacoustic = Any]] THEN class = {0}</entry>
+				<entry name="forb-attribute-01">1: IF [[gimpuls = Any]] THEN class = {0}</entry>
+				<entry name="forb-attribute-02">1: IF [[goimpuls = Any]] THEN class = {0}</entry>
+				<entry name="forb-attribute-03">1: IF [[ghazard = Any]] THEN class = {0}</entry>
+	
+				<entry name="forb-attribute-10">1: IF [[seismoacoustic = Any]] THEN class = {1}</entry>
+				<entry name="forb-attribute-11">1: IF [[gimpuls = Any]] THEN class = {1}</entry>
+				<entry name="forb-attribute-12">1: IF [[goimpuls = Any]] THEN class = {1}</entry>
+				<entry name="forb-attribute-13">1: IF [[ghazard = Any]] THEN class = {1}</entry>
+			</param>
+			
+		</parameter_set>
+	
+		<!--================================================================================================================-->
+		
+		<parameter_set name="BinaryEntropy, 7. +seismoacoustic +shift +genergy +gimpuls +genergy +goimpuls +ghazard">
+			<param name="min_rule_covered">11</param>
+			<param name="induction_measure">BinaryEntropy</param>
+			<param name="pruning_measure">BinaryEntropy</param>
+			<param name="max_growing">0</param>
+			<param name="use_expert">true</param>
+			<param name="extend_using_preferred">false</param>
+			<param name="extend_using_automatic">false</param>
+			<param name="induce_using_preferred">false</param>
+			<param name="induce_using_automatic">true</param>
+			<param name="consider_other_classes">false</param>
+			<param name ="expert_rules">
+			</param>
+			<param name ="expert_preferred_conditions">
+			</param>
+			<param name ="expert_forbidden_conditions">
+				<entry name="forb-conditions-00">1: IF [[nbumps = Any]] THEN class = {0}</entry>
+				<entry name="forb-conditions-01">1: IF [[nbumps2 = Any]] THEN class = {0}</entry>
+				<entry name="forb-conditions-02">1: IF [[nbumps4 = Any]] THEN class = {0}</entry>
+				<entry name="forb-conditions-03">1: IF [[nbumps5 = Any]] THEN class = {0}</entry>
+				<entry name="forb-conditions-04">1: IF [[nbumps6 = Any]] THEN class = {0}</entry>
+				<entry name="forb-conditions-05">1: IF [[nbumps7 = Any]] THEN class = {0}</entry>
+				<entry name="forb-conditions-06">1: IF [[nbumps89 = Any]] THEN class = {0}</entry>
+				<entry name="forb-conditions-07">1: IF [[senergy = Any]] THEN class = {0}</entry>
+				<entry name="forb-conditions-08">1: IF [[maxenergy = Any]] THEN class = {0}</entry>
+				<entry name="forb-conditions-09">1: IF [[seismic = Any]] THEN class = {0}</entry>
+				<entry name="forb-conditions-02">1: IF [[nbumps3 = Any]] THEN class = {0}</entry>
+			
+				<entry name="forb-conditions-10">1: IF [[nbumps = Any]] THEN class = {1}</entry>
+				<entry name="forb-conditions-11">1: IF [[nbumps2 = Any]] THEN class = {1}</entry>
+				<entry name="forb-conditions-12">1: IF [[nbumps4 = Any]] THEN class = {1}</entry>
+				<entry name="forb-conditions-13">1: IF [[nbumps5 = Any]] THEN class = {1}</entry>
+				<entry name="forb-conditions-14">1: IF [[nbumps6 = Any]] THEN class = {1}</entry>
+				<entry name="forb-conditions-15">1: IF [[nbumps7 = Any]] THEN class = {1}</entry>
+				<entry name="forb-conditions-16">1: IF [[nbumps89 = Any]] THEN class = {1}</entry>
+				<entry name="forb-conditions-17">1: IF [[senergy = Any]] THEN class = {1}</entry>
+				<entry name="forb-conditions-18">1: IF [[maxenergy = Any]] THEN class = {1}</entry>
+				<entry name="forb-conditions-19">1: IF [[seismic = Any]] THEN class = {1}</entry>
+				<entry name="forb-conditions-02">1: IF [[nbumps3 = Any]] THEN class = {1}</entry>
+			</param>
+		</parameter_set>
+		
+		<!--================================================================================================================-->
+		
+	</parameter_sets>
+
+	<datasets>
+		<dataset name="seismic-bumps">
+			<path>../datasets/seismic-bumps/cv-splits</path>
+			<label>class</label>
+			<type>BinaryClassification</type>
+			<report_path>./reports</report_path>
+		</dataset>
+		
+	</datasets>
+</experiment>
