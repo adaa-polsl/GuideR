@@ -69,12 +69,12 @@
 			<param name ="expert_rules">
 			</param>
 			<param name ="expert_preferred_conditions">
-				<entry name="preferred-attribute-0">inf: IF [[genergy = Any]] THEN class = {0}</entry>
-				<entry name="preferred-attribute-1">inf: IF [[senergy = Any]] THEN class = {0}</entry>
-				<entry name="preferred-attribute-2">inf: IF [[gimpuls = Any]] THEN class = {0}</entry>
-				<entry name="preferred-attribute-3">inf: IF [[genergy = Any]] THEN class = {1}</entry>
-				<entry name="preferred-attribute-4">inf: IF [[senergy = Any]] THEN class = {1}</entry>
-				<entry name="preferred-attribute-5">inf: IF [[gimpuls = Any]] THEN class = {1}</entry>
+				<entry name="preferred-attribute-0">100: IF [[genergy = Any]] THEN class = {0}</entry>
+				<entry name="preferred-attribute-1">100: IF [[senergy = Any]] THEN class = {0}</entry>
+				<entry name="preferred-attribute-2">100: IF [[gimpuls = Any]] THEN class = {0}</entry>
+				<entry name="preferred-attribute-3">100: IF [[genergy = Any]] THEN class = {1}</entry>
+				<entry name="preferred-attribute-4">100: IF [[senergy = Any]] THEN class = {1}</entry>
+				<entry name="preferred-attribute-5">100: IF [[gimpuls = Any]] THEN class = {1}</entry>
 			</param>
 			<param name ="expert_forbidden_conditions">
 			</param>	
@@ -97,22 +97,22 @@
 			<param name ="expert_rules">	
 			</param>
 			<param name ="expert_preferred_conditions">
-				<entry name="forb-condition-01">inf: IF [[seismic = {a}]] THEN class = {0}</entry>
-				<entry name="forb-condition-02">inf: IF [[seismic = {b}]] THEN class = {0}</entry>
-				<entry name="forb-condition-03">inf: IF [[seismoacoustic = {a}]] THEN class = {0}</entry>
-				<entry name="forb-condition-04">inf: IF [[seismoacoustic = {b}]] THEN class = {0}</entry>
-				<entry name="forb-condition-05">inf: IF [[ghazard = {a}]] THEN class = {0}</entry>
-				<entry name="forb-condition-06">inf: IF [[ghazard = {b}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-01">100: IF [[seismic = {a}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-02">100: IF [[seismic = {b}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-03">100: IF [[seismoacoustic = {a}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-04">100: IF [[seismoacoustic = {b}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-05">100: IF [[ghazard = {a}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-06">100: IF [[ghazard = {b}]] THEN class = {0}</entry>
 				
-				<entry name="forb-condition-11">inf: IF [[seismic = {b}]] THEN class = {1}</entry>
-				<entry name="forb-condition-12">inf: IF [[seismic = {c}]] THEN class = {1}</entry>
-				<entry name="forb-condition-13">inf: IF [[seismic = {d}]] THEN class = {1}</entry>
-				<entry name="forb-condition-14">inf: IF [[seismoacoustic = {b}]] THEN class = {1}</entry>
-				<entry name="forb-condition-15">inf: IF [[seismoacoustic = {c}]] THEN class = {1}</entry>
-				<entry name="forb-condition-16">inf: IF [[seismoacoustic = {d}]] THEN class = {1}</entry>
-				<entry name="forb-condition-17">inf: IF [[ghazard = {b}]] THEN class = {1}</entry>
-				<entry name="forb-condition-18">inf: IF [[ghazard = {c}]] THEN class = {1}</entry>
-				<entry name="forb-condition-19">inf: IF [[ghazard = {d}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-11">100: IF [[seismic = {b}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-12">100: IF [[seismic = {c}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-13">100: IF [[seismic = {d}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-14">100: IF [[seismoacoustic = {b}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-15">100: IF [[seismoacoustic = {c}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-16">100: IF [[seismoacoustic = {d}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-17">100: IF [[ghazard = {b}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-18">100: IF [[ghazard = {c}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-19">100: IF [[ghazard = {d}]] THEN class = {1}</entry>
 			</param>
 			<param name ="expert_forbidden_conditions">
 				
