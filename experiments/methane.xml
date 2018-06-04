@@ -2,7 +2,7 @@
 <experiment>
 	<parameter_sets>
 	
-		<parameter_set name="RSS, 1. no knowledge">
+		<parameter_set name="auto">
 			<param name="min_rule_covered">4</param>
 			<param name="induction_measure">RSS</param>
 			<param name="pruning_measure">RSS</param>
@@ -10,7 +10,7 @@
 	
 		<!--================================================================================================================-->
 		
-		<parameter_set name="RSS, 2. PD=0 or PD=1">
+		<parameter_set name="guided-r1, PD=0 or PD=1">
 			<param name="min_rule_covered">4</param>
 			<param name="induction_measure">RSS</param>
 			<param name="pruning_measure">RSS</param>			
@@ -29,7 +29,7 @@
 		
 		<!--================================================================================================================-->
 		
-		<parameter_set name="RSS, 3. PD=1 and MM116 le 1">
+		<parameter_set name="guided-r2, PD=1 and MM116 le 1">
 			<param name="min_rule_covered">4</param>
 			<param name="induction_measure">RSS</param>
 			<param name="pruning_measure">RSS</param>			
@@ -47,7 +47,7 @@
 		
 		<!--================================================================================================================-->
 		
-		<parameter_set name="RSS, 4. PD=0 and MM116 ge 1">
+		<parameter_set name="guided-r3, PD=0 and MM116 ge 1">
 			<param name="min_rule_covered">4</param>
 			<param name="induction_measure">RSS</param>
 			<param name="pruning_measure">RSS</param>			
@@ -65,7 +65,7 @@
 		
 		<!--================================================================================================================-->
 		
-		<parameter_set name="RSS, 5. DMM and MM116 and PD">
+		<parameter_set name="guided-r4, DMM and MM116 and PD">
 			<param name="min_rule_covered">4</param>
 			<param name="induction_measure">RSS</param>
 			<param name="pruning_measure">RSS</param>			
