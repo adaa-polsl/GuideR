@@ -2,7 +2,7 @@
 <experiment>
 	<parameter_sets>
 		
-		<parameter_set name="BinaryEntropy, 1. no knowledge">
+		<parameter_set name="auto">
 			<param name="min_rule_covered">11</param>
 			<param name="induction_measure">BinaryEntropy</param>
 			<param name="pruning_measure">BinaryEntropy</param>
@@ -11,7 +11,7 @@
 		
 		<!--================================================================================================================-->
 		
-		<parameter_set name="BinaryEntropy, 2. gimpuls_750">
+		<parameter_set name="guided-c1, gimpuls_750">
 			<param name="min_rule_covered">11</param>
 			<param name="induction_measure">BinaryEntropy</param>
 			<param name="pruning_measure">BinaryEntropy</param>
@@ -33,7 +33,7 @@
 		
 		<!--================================================================================================================-->
 			
-		<parameter_set name="BinaryEntropy, 3. gimpuls_750 extended">
+		<parameter_set name="guided-c2, gimpuls_750 extended">
 			<param name="min_rule_covered">11</param>
 			<param name="induction_measure">BinaryEntropy</param>
 			<param name="pruning_measure">BinaryEntropy</param>
@@ -55,7 +55,7 @@
 		
 		<!--================================================================================================================-->
 		
-		<parameter_set name="BinaryEntropy, 4. gimpuls_genergy_senergy">
+		<parameter_set name="guided-c3, gimpuls_genergy_senergy">
 			<param name="min_rule_covered">11</param>
 			<param name="induction_measure">BinaryEntropy</param>
 			<param name="pruning_measure">BinaryEntropy</param>
@@ -65,7 +65,6 @@
 			<param name="extend_using_automatic">false</param>
 			<param name="induce_using_preferred">true</param>
 			<param name="induce_using_automatic">true</param>
-			<param name="preferred_conditions_per_rule">2</param>
 			<param name ="expert_rules">
 			</param>
 			<param name ="expert_preferred_conditions">
@@ -82,7 +81,7 @@
 		
 		<!--================================================================================================================-->
 					
-		<parameter_set name="BinaryEntropy, 5. seismic OR seismoacoustic OR ghazard">
+		<parameter_set name="guided-c4, seismic OR seismoacoustic OR ghazard">
 			<param name="min_rule_covered">11</param>
 			<param name="induction_measure">BinaryEntropy</param>
 			<param name="pruning_measure">BinaryEntropy</param>
@@ -97,22 +96,22 @@
 			<param name ="expert_rules">	
 			</param>
 			<param name ="expert_preferred_conditions">
-				<entry name="preferred-condition-01">100: IF [[seismic = {a}]] THEN class = {0}</entry>
-				<entry name="preferred-condition-02">100: IF [[seismic = {b}]] THEN class = {0}</entry>
-				<entry name="preferred-condition-03">100: IF [[seismoacoustic = {a}]] THEN class = {0}</entry>
-				<entry name="preferred-condition-04">100: IF [[seismoacoustic = {b}]] THEN class = {0}</entry>
-				<entry name="preferred-condition-05">100: IF [[ghazard = {a}]] THEN class = {0}</entry>
-				<entry name="preferred-condition-06">100: IF [[ghazard = {b}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-01">inf: IF [[seismic = {a}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-02">inf: IF [[seismic = {b}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-03">inf: IF [[seismoacoustic = {a}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-04">inf: IF [[seismoacoustic = {b}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-05">inf: IF [[ghazard = {a}]] THEN class = {0}</entry>
+				<entry name="preferred-condition-06">inf: IF [[ghazard = {b}]] THEN class = {0}</entry>
 				
-				<entry name="preferred-condition-11">100: IF [[seismic = {b}]] THEN class = {1}</entry>
-				<entry name="preferred-condition-12">100: IF [[seismic = {c}]] THEN class = {1}</entry>
-				<entry name="preferred-condition-13">100: IF [[seismic = {d}]] THEN class = {1}</entry>
-				<entry name="preferred-condition-14">100: IF [[seismoacoustic = {b}]] THEN class = {1}</entry>
-				<entry name="preferred-condition-15">100: IF [[seismoacoustic = {c}]] THEN class = {1}</entry>
-				<entry name="preferred-condition-16">100: IF [[seismoacoustic = {d}]] THEN class = {1}</entry>
-				<entry name="preferred-condition-17">100: IF [[ghazard = {b}]] THEN class = {1}</entry>
-				<entry name="preferred-condition-18">100: IF [[ghazard = {c}]] THEN class = {1}</entry>
-				<entry name="preferred-condition-19">100: IF [[ghazard = {d}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-11">inf: IF [[seismic = {b}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-12">inf: IF [[seismic = {c}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-13">inf: IF [[seismic = {d}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-14">inf: IF [[seismoacoustic = {b}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-15">inf: IF [[seismoacoustic = {c}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-16">inf: IF [[seismoacoustic = {d}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-17">inf: IF [[ghazard = {b}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-18">inf: IF [[ghazard = {c}]] THEN class = {1}</entry>
+				<entry name="preferred-condition-19">inf: IF [[ghazard = {d}]] THEN class = {1}</entry>
 			</param>
 			<param name ="expert_forbidden_conditions">
 				
@@ -122,7 +121,7 @@
 		
 		<!--================================================================================================================-->
 				
-		<parameter_set name="BinaryEntropy, 6. +seismic +nbumps +energy +maxenergy +shift">
+		<parameter_set name="guided-c5, +seismic +nbumps +energy +maxenergy +shift">
 			<param name="min_rule_covered">11</param>
 			<param name="induction_measure">BinaryEntropy</param>
 			<param name="pruning_measure">BinaryEntropy</param>
@@ -153,7 +152,7 @@
 	
 		<!--================================================================================================================-->
 		
-		<parameter_set name="BinaryEntropy, 7. +seismoacoustic +shift +genergy +gimpuls +genergy +goimpuls +ghazard">
+		<parameter_set name="guided-c6, +seismoacoustic +shift +genergy +gimpuls +genergy +goimpuls +ghazard">
 			<param name="min_rule_covered">11</param>
 			<param name="induction_measure">BinaryEntropy</param>
 			<param name="pruning_measure">BinaryEntropy</param>
