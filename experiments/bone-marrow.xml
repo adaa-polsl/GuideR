@@ -2,13 +2,13 @@
 <experiment>
 	<parameter_sets>
 	
-		<parameter_set name="1. no knowledge">
+		<parameter_set name="auto">
 			<param name="min_rule_covered">5</param>
 		</parameter_set>
 	
 		<!--================================================================================================================-->
 		
-		<parameter_set name="2. +CD34 -PLT -ANC">
+		<parameter_set name="guided-s1, +CD34 -PLT -ANC">
 			<param name="min_rule_covered">5</param>	
 			<param name="use_expert">true</param>
 			<param name="extend_using_preferred">false</param>
@@ -29,7 +29,7 @@
 		
 		<!--================================================================================================================-->
 		
-		<parameter_set name="3. expert rules">
+		<parameter_set name="guided-s2, expert rules">
 			<param name="min_rule_covered">5</param>	
 			<param name="use_expert">true</param>
 			<param name="extend_using_preferred">false</param>
@@ -50,7 +50,7 @@
 		
 		<!--================================================================================================================-->
 		
-		<parameter_set name="4. expert rules extended">
+		<parameter_set name="guided-s3, expert rules extended">
 			<param name="min_rule_covered">5</param>	
 			<param name="use_expert">true</param>
 			<param name="extend_using_preferred">true</param>
@@ -74,7 +74,7 @@
 		
 		<!--================================================================================================================-->
 
-		<parameter_set name="5. expert rules">
+		<parameter_set name="guided-s4, expert rules">
 			<param name="min_rule_covered">5</param>	
 			<param name="use_expert">true</param>
 			<param name="extend_using_preferred">false</param>
