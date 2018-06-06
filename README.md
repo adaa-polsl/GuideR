@@ -148,5 +148,10 @@ Depending on the content of the *./datasets/seismic-bumps* directory, different 
     * ...
 3. training and testing on the same set - same as in (1), but with identical files.
 
+## Example datasets and experiments
+
+For convenience, we provide [datasets](https://github.com/adaa-polsl/GuideR/tree/master/datasets) invesitgated in the GuideR paper, together with the corresponding [XML experimental files](https://github.com/adaa-polsl/GuideR/tree/master/experiments).
 
 ## Citing
+
+[M. Sikora, Ł. Wróbel, A. Gudyś (2018) GuideR: a guided separate-and-conquer rule learning in classification, regression, and survival settings, arXiv:1806.01579](https://arxiv.org/abs/1806.01579)
