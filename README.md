@@ -39,6 +39,7 @@ where:
 * `induction_measure` - rule quality measure used during growing; one of the following: *Accuracy*, *C2*, *Correlation*, 		*Lift*,	*LogicalSufficiency*,	*Precision*, *RSS*,	*GeoRSS*, *SBayesian*, *BinaryEntropy*,
 * `pruning_measure` - rule quality measure used during pruning; one of the aforementioned measures,
 * `voting_measure` - rule quality measure used for voting; one of the aforementioned measures.
+The measure parameters apply only for classification and regression problems - in survival datasets log-rank statistics is always used.
 
 Expert knowledge is also specified through parameters:
 ```
