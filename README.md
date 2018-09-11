@@ -31,12 +31,14 @@ As each algorithm parameter has its default value, only selected parameters may 
   	<param name="min_rule_covered">...</param>
   	<param name="induction_measure">...</param>
   	<param name="pruning_measure">...</param>
+	<param name="voting_measure">...</param>
 </parameter_set>
 ```    
 where:
 * `min_rule_covered` - minimum number of previously uncovered examples a new rule has to cover,
 * `induction_measure` - rule quality measure used during growing; one of the following: *Accuracy*, *C2*, *Correlation*, 		*Lift*,	*LogicalSufficiency*,	*Precision*, *RSS*,	*GeoRSS*, *SBayesian*, *BinaryEntropy*,
-* `pruning_measure` - rule quality measure used during pruning; same as for `induction_measure`.
+* `pruning_measure` - rule quality measure used during pruning; one of the aforementioned measures,
+* `voting_measure` - rule quality measure used for voting; one of the aforementioned measures.
 
 Expert knowledge is also specified through parameters:
 ```
@@ -44,6 +46,7 @@ Expert knowledge is also specified through parameters:
   	<param name="min_rule_covered">...</param>
   	<param name="induction_measure">...</param>
   	<param name="pruning_measure">...</param>
+	<param name="voting_measure">...</param>
   	<param name="use_expert">true</param>
   	<param name="extend_using_preferred">...</param>
   	<param name="extend_using_automatic">...</param>
