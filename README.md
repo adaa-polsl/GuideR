@@ -159,4 +159,4 @@ For convenience, we provide [datasets](https://github.com/adaa-polsl/GuideR/tree
 
 ## Citing
 
-[M. Sikora, Ł. Wróbel, A. Gudyś (2018) GuideR: a guided separate-and-conquer rule learning in classification, regression, and survival settings, arXiv:1806.01579](https://arxiv.org/abs/1806.01579)
+[M. Sikora, Ł. Wróbel, A. Gudyś (2018) GuideR: a guided separate-and-conquer rule learning in classification, regression, and survival settings, Knowledge-Based Systems, 173, 1-14](https://www.sciencedirect.com/science/article/pii/S0950705119300802?dgcid=coauthor)
