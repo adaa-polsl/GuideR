@@ -2,6 +2,8 @@
 User-guided separate-and-conquer rule learning in classification, regression, and survival settings
 
 ## Usage
+UPDATE: GuideR is now the part of [RuleKit](https://github.com/adaa-polsl/RuleKit) - our comprehensive suite for rule-based learning. We suggest using RuleKit for analyses as we constatly improve its functionality and keep it up to date.
+
 GuideR is distributed as a standalone JAR package (see Release tab for download). To run the analysis, execute
 ```
 java -jar GuideR experiments.xml
